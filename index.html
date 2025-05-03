@@ -8,25 +8,20 @@
 </head>
 <body>
   <header>
-    <h1>Willkommen im Honigshop!</h1>
-    <p>Hier findest du leckeren Honig in verschiedenen Größen.</p>
+    <h1>Willkommen im Honigshop</h1>
+    <nav>
+      <a href="index.html">Startseite</a>
+      <a href="cart.html">Warenkorb</a>
+      <a href="login.html">Login</a>
+    </nav>
   </header>
 
-  <div class="products">
-    <div class="product">
-      <img src="images/honig500g.jpg" alt="Honig 500g" class="product-image">
-      <h2>Honig (500g)</h2>
-      <p>Preis: 5€</p>
-      <button onclick="addToCart('Honig 500g', 5)">In den Warenkorb</button>
+  <main>
+    <h2>Unsere Produkte</h2>
+    <div id="product-list">
+      <!-- Hier werden die Produkte geladen -->
     </div>
-
-    <div class="product">
-      <img src="images/honig1kg.jpg" alt="Honig 1kg" class="product-image">
-      <h2>Honig (1kg)</h2>
-      <p>Preis: 8€</p>
-      <button onclick="addToCart('Honig 1kg', 8)">In den Warenkorb</button>
-    </div>
-  </div>
+  </main>
 
   <footer>
     <p>&copy; 2025 Honigshop - Alle Rechte vorbehalten</p>
