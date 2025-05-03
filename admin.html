@@ -4,16 +4,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Admin Dashboard</h1>
-  <p>Willkommen, Admin! Hier kannst du Produkte verwalten.</p>
+  <header>
+    <h1>Admin Dashboard</h1>
+    <p>Hier kannst du die Produkte im Shop verwalten.</p>
+  </header>
 
-  <!-- Buttons für Verwaltung -->
-  <button onclick="addProduct()">Produkt Hinzufügen</button>
-  <button onclick="editProduct()">Produkt Bearbeiten</button>
-  <button onclick="deleteProduct()">Produkt Löschen</button>
-  <button onclick="logout()">Abmelden</button>
+  <div class="admin-products">
+    <div class="admin-product">
+      <h2>Honig (500g)</h2>
+      <p>Preis: 5€</p>
+      <img src="images/honig500g.jpg" alt="Honig 500g" class="product-image">
+      <button onclick="editProduct('Honig 500g', 5)">Bearbeiten</button>
+      <button onclick="deleteProduct('Honig 500g')">Löschen</button>
+    </div>
+
+    <div class="admin-product">
+      <h2>Honig (1kg)</h2>
+      <p>Preis: 8€</p>
+      <img src="images/honig1kg.jpg" alt="Honig 1kg" class="product-image">
+      <button onclick="editProduct('Honig 1kg', 8)">Bearbeiten</button>
+      <button onclick="deleteProduct('Honig 1kg')">Löschen</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Honigshop - Alle Rechte vorbehalten</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
