@@ -3,32 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Admin Dashboard</title>
+  <title>Admin - Honigshop</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>Admin Dashboard</h1>
-    <p>Hier kannst du die Produkte im Shop verwalten.</p>
+    <h1>Admin Bereich</h1>
+    <nav>
+      <a href="index.html">Startseite</a>
+      <a href="login.html">Logout</a>
+    </nav>
   </header>
 
-  <div class="admin-products">
-    <div class="admin-product">
-      <h2>Honig (500g)</h2>
-      <p>Preis: 5€</p>
-      <img src="images/honig500g.jpg" alt="Honig 500g" class="product-image">
-      <button onclick="editProduct('Honig 500g', 5)">Bearbeiten</button>
-      <button onclick="deleteProduct('Honig 500g')">Löschen</button>
-    </div>
+  <main>
+    <section class="product-management">
+      <h2>Produkte verwalten</h2>
+      <form id="add-product-form">
+        <input type="text" id="product-name" placeholder="Produktname" required>
+        <input type="number" id="product-price" placeholder="Preis" required>
+        <textarea id="product-description" placeholder="Beschreibung" required></textarea>
+        <input type="file" id="product-image" accept="image/*" required>
+        <button type="submit">Produkt hinzufügen</button>
+      </form>
 
-    <div class="admin-product">
-      <h2>Honig (1kg)</h2>
-      <p>Preis: 8€</p>
-      <img src="images/honig1kg.jpg" alt="Honig 1kg" class="product-image">
-      <button onclick="editProduct('Honig 1kg', 8)">Bearbeiten</button>
-      <button onclick="deleteProduct('Honig 1kg')">Löschen</button>
-    </div>
-  </div>
+      <h3>Alle Produkte</h3>
+      <ul id="product-list">
+        <!-- Produktliste wird hier geladen -->
+      </ul>
+    </section>
+  </main>
 
   <footer>
     <p>&copy; 2025 Honigshop - Alle Rechte vorbehalten</p>
